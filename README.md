@@ -2,4 +2,5 @@
 
 ## Recursos:
 
-* nova fonte para o texto, do google fonts.
+* nova fonte para o texto, do google fonts;
+* efeito de flip cards ao escolher uma opção.

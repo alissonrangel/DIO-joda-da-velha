@@ -1,14 +1,11 @@
-const cards = document.querySelectorAll('.flipper');
 var jogador, vencedor = null;
 
 var jogadorSelecionado = document.getElementById('jogador-selecionado');
 var vencedorSelecionado = document.getElementById('vencedor-selecionado');
 
-//var quadrados = document.getElementsByClassName('quadrado');
 mudarJogador('X');
 
 function escolherQuadrado(id) {
-    console.log('clicou no botão - ' + id);
 
     if ( vencedor !== null){
         return;
@@ -22,8 +19,7 @@ function escolherQuadrado(id) {
         return;
     }
 
-    item.innerHTML = jogador;
-    //quadrado.style.color = '#000';
+    item.innerHTML = jogador;    
 
     if ( jogador === 'X'){                
         quadrado.children[2].style.display = 'block';                
@@ -57,15 +53,6 @@ function checaVencedor() {
     var quadrado7 = document.getElementById('7');
     var quadrado8 = document.getElementById('8');
     var quadrado9 = document.getElementById('9');
-    // var quadrado1 = document.getElementById('one');
-    // var quadrado2 = document.getElementById('two');
-    // var quadrado3 = document.getElementById('three');
-    // var quadrado4 = document.getElementById('four');
-    // var quadrado5 = document.getElementById('five');
-    // var quadrado6 = document.getElementById('six');
-    // var quadrado7 = document.getElementById('seven');
-    // var quadrado8 = document.getElementById('eight');
-    // var quadrado9 = document.getElementById('nine');
 
     if (checaSequencia(quadrado1, quadrado2, quadrado3)){
         mudarVencedor(quadrado1);
@@ -133,9 +120,6 @@ function mudaCorQuadrado(quadrado1, quadrado2, quadrado3) {
         quadrado3.parentNode.children[5].style.display = 'block';
         quadrado3.parentNode.style.transform = 'rotateY(180deg)';       
     }
-    //quadrado1.parentNode.style.background = '#0f0';
-    // quadrado2.style.background = '#0f0';
-    // quadrado3.style.background = '#0f0';
 }
 
 function checaSequencia(quadrado1, quadrado2, quadrado3) {
@@ -148,40 +132,4 @@ function checaSequencia(quadrado1, quadrado2, quadrado3) {
 
 function reiniciar() {
     document.location.reload(true);
-    // vencedor = null;
-    // vencedorSelecionado.innerHTML = "";
-
-    // for (let i = 1; i  <= 9; i++) {
-    //     var quadrado = document.getElementById(i);
-    //     quadrado.style.background = '#eee';
-    //     quadrado.style.color = '#eee';
-    //     quadrado.innerHTML = '-';
-    // }
-
-    // mudarJogador('X');
 }
-
-function flipCard() {
-    
-    this.children[1].style.zindex = '10';
-
-    if ( jogador === 'X'){                
-        this.children[1].style.display = 'block';                
-        this.style.transform = 'rotateY(180deg)';
-    } else {
-        this.children[2].style.display = 'block';                        
-        this.style.transform = 'rotateY(180deg)';        
-    }
-    
-    
-}
-
-/*
-cards.forEach((card)=>{
-    card.children[1].style.zindex = '1000';
-    console.log("One - " + card.children[1].style.zindex);
-    console.log("Two - " + card.children[0].style.zindex);
-    
-    card.addEventListener('click', flipCard);
-})
-*/

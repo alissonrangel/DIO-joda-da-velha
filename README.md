@@ -9,4 +9,4 @@
 
 ## jogue no link abaixo
 
-[I'm an inline-style link with title](https://www.jogos.alissonescorcio.life/DIO-jogo-da-velha/index.html "Jogo da Velha")
+[Jogo da Velha](https://www.jogos.alissonescorcio.life/DIO-jogo-da-velha/index.html "Jogo da Velha")
